@@ -17,12 +17,12 @@ import jakarta.persistence.Table;
 public class CategoriaProduto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_categoria_produto")
 	private Long id;
-	
-	@Column(name = "nome_desc", nullable = false )
+
+	@Column(name = "nome_desc", nullable = false)
 	private String nomeDesc;
 
 	public Long getId() {
@@ -57,6 +57,5 @@ public class CategoriaProduto implements Serializable {
 		CategoriaProduto other = (CategoriaProduto) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
+
 }
